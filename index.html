@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Platform Matrix</title>
+    <style>
+        :root {
+            --primary-color: #2E7D32;
+            --secondary-color: #81C784;
+            --accent-color: #FFC107;
+            --text-light: #FFFFFF;
+            --text-dark: #263238;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: var(--text-dark);
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        
+        .matrix {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .box {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background-color: var(--accent-color);
+        }
+        
+        .box h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        .box ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .box li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .box li::before {
+            content: '•';
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-right: 10px;
+            line-height: 1.2;
+        }
+        
+        .box-what::before { background-color: #FFC107; }
+        .box-why::before { background-color: #4CAF50; }
+        .box-how::before { background-color: #2196F3; }
+        .box-when::before { background-color: #9C27B0; }
+        
+        .box-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            opacity: 1;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--text-dark);
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .matrix {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4, auto);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>KISSAN 4.0</h1>
+            <p>Technology-driven solutions for sustainable and efficient farming</p>
+        </div>
+        
+        <div class="matrix">
+            <div class="box box-what">
+                <div class="box-icon">📊</div>
+                <h2>WHAT</h2>
+                <ul>
+                    <li>Integrated Agricultural Platform</li>
+                    <li>Smart Infrastructure</li>
+                    <li>AI-Driven Solutions</li>
+                    <li>Digital Marketplaces</li>
+                    <li>Comprehensive Support System</li>
+                </ul>
+            </div>
+            
+            <div class="box box-why">
+                <div class="box-icon">🎯</div>
+                <h2>WHY</h2>
+                <ul>
+                    <li>Address Farming Challenges</li>
+                    <li>Enhance Farmer Prosperity</li>
+                    <li>Promote Sustainability</li>
+                    <li>Enable Global Impact</li>
+                    <li>Improve Decision-Making</li>
+                </ul>
+            </div>
+            
+            <div class="box box-how">
+                <div class="box-icon">⚙️</div>
+                <h2>HOW</h2>
+                <ul>
+                    <li>Deploy Smart Technologies</li>
+                    <li>Build E-Marketplaces</li>
+                    <li>Drive Innovation</li>
+                    <li>Create Data Ecosystem</li>
+                    <li>Foster Partnerships</li>
+                </ul>
+            </div>
+            
+            <div class="box box-when">
+                <div class="box-icon">🕒</div>
+                <h2>WHEN</h2>
+                <ul>
+                    <li>Current Technology Rollout</li>
+                    <li>Iterative Platform Growth</li>
+                    <li>Feedback-Driven Updates</li>
+                    <li>Future Global Expansion</li>
+                    <li>Ongoing Feature Enhancements</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+        </div>
+    </div>
+</body>
+</html>
